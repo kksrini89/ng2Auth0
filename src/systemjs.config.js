@@ -24,8 +24,11 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
 
       // other libraries
-      'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'rxjs': 'npm:rxjs',
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+
+      //Auth0 and Angular2-jwt
+      'angular2-jwt': 'node_modules/angular2-jwt/angular2-jwt.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -39,6 +42,9 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      'angular2-jwt': {
+        "defaultExtension": "js"
       }
     }
   });
