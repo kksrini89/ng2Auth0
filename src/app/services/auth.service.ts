@@ -8,7 +8,7 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService {
     //new Auth0Lock('clientId','domain',{auth0customOptions});
-    lock = new Auth0Lock('1t0l33OA3gLjZ250l75vNCFW6U26R0LL', 'kkspizza.eu.auth0.com', {});
+    lock = new Auth0Lock('1t0l33OA3gLjZ250l75vNCFW6U26R0LL', 'kkspizza.eu.auth0.com', options);
 
     constructor() {
         this.lock.on('authenticated', (authResult: any) => {

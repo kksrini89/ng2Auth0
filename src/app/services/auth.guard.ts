@@ -8,12 +8,13 @@ import { AuthService } from './auth.service';
 export class AuthGuard implements CanActivate {
     constructor(private auth: AuthService, private router: Router) { }
 
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
         if (this.auth.authenticated()) {
-            this.router.navigate(['/profile']);
+            console.log('AUTH GUARD PASSED');
             return true;
         } else {
-            this.router.navigate(['']);
+            console.log('GUARD BLOCKED BY AUTH');
+            this.router.navigate(['/']);
             return false;
         }
     }

@@ -1,3 +1,3 @@
 export const options = {
-    allowedConnections: ['twitter']
+    // allowedConnections: ['twitter', 'Username-Password-Authentication']
 }
